@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "373a6c9a-4662-43de-8992-3b982ed3c69e",
+		"name": "EButik API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "4416051"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer necika",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/users/register"
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer necika",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/users/login"
+					},
+					"response": []
+				},
+				{
+					"name": "SecretResourceTest",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYWRtaW4iLCJpYXQiOjE2ODQ5MTY5Nzl9.mG4XMMe39DZr0WIkPyk2pF0GTZeGdGhFrEk6H_cmdqw",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/users/super-secure-resource"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Get all products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/products/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get product by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/products/{productId}"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"NewProduct1\",\r\n    \"description\": \"NewProductDescription1\",\r\n    \"price\": 11111,\r\n    \"stock\": 1,\r\n    \"image\": \"NewProductImage1\",\r\n    \"category\": [\"sport\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/products/createProduct"
+					},
+					"response": []
+				},
+				{
+					"name": "Update a product",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"price\": 1211\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/products/{productId}"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3000/api/products/{productId}"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
